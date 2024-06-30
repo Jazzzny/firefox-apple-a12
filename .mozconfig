@@ -1,0 +1,18 @@
+export CFLAGS="-mcpu=apple-a12"
+export CXXFLAGS="-mcpu=apple-a12"
+export RUSTFLAGS="-C target-cpu=apple-a12 -C target-feature=-rcpc2"
+
+export MOZILLA_OFFICIAL=1
+export MOZ_PACKAGE_JSSHELL=1
+
+ac_add_options --enable-release
+ac_add_options --enable-update-channel=release
+ac_add_options --enable-crashreporter
+ac_add_options --enable-official-branding
+ac_add_options --disable-updater
+ac_add_options --disable-tests
+ac_add_options --enable-geckodriver
+
+ac_add_options --with-google-location-service-api-keyfile=[]
+ac_add_options --with-google-safebrowsing-api-keyfile=[]
+ac_add_options --with-mozilla-api-keyfile=[]
